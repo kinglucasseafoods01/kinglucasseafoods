@@ -1,0 +1,252 @@
+/* Responsive design */
+
+/* Mobile devices */
+
+@media only screen and (max-width: 620px) {
+    main {
+        flex-direction: column;
+    }
+    .navbar, ul {
+        display: none;
+    }
+    .navbar, li, .navbar, a {
+        display: none;
+        padding: 22px;
+    }
+    .sidebar {
+        display: none;
+      }
+    #sidebar.sidebar-open {
+        display: block;
+      }
+    section {
+        margin: 10px;
+    }
+    .background, img {
+        height: 420px;
+    }
+    .home {
+        text-align: center;
+    }
+    .home, a {
+        font-size: 30px;
+    }
+    .explr-btn {
+        font-size: 20;
+        display: inline-block;
+    }
+
+}
+
+/* Tablets */
+@media only screen and (min-width: 621px) and (max-width: 781px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section {
+        width: 50%;
+        margin: 10px;
+    }
+    .navbar, ul {
+        justify-content: center;
+        padding: 10px;
+    }
+    .navbar, li {
+        padding: 5px 15px 5px;
+        font-size: 15px;
+    }
+    .sidebar-toggle {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+      }
+    .sidebar-open {
+        display: none;
+    }
+    .home, h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .home, p {
+        font-size: 20px;
+    }
+    .background, img {
+        height: 450px;
+        background-size: cover;
+    }
+    .explr-btn {
+        font-size: 25px;
+    }
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 782px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .navbar a {
+        font-size: 20px;
+        padding: 15px;
+    }
+    .navbar, ul {
+        justify-content: center;
+        padding: 15px;
+    }
+    .sidebar-toggle {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+      }
+    .sidebar-open {
+        display: none;
+    }
+    section {
+        width: 80%;
+    }
+    .home {
+        align-items: center;
+        font-size: 35px;
+        margin: 20vh;
+    }
+    .background, img {
+        height: 820px;
+    }
+}
+
+body {
+    background-color: #575656;
+
+}
+
+header {
+    background-color: #1a1919;
+    color: #fff;
+    text-align: center;
+    opacity: 0.50;
+}
+
+/* side bar */
+
+/* Style the sidebar toggle button */
+.sidebar-toggle {
+    position: fixed;
+    top: 8px;
+    right: 10px;
+    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+  }
+  
+  /* Style the sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #333;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            overflow-y: auto; /* Add this to prevent scrollbar issues */
+        }
+  
+    .sidebar-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+  
+.sidebar-nav li {
+    margin-bottom: 20px;
+}
+  
+    .sidebar-nav a {
+        color: #fff;
+        text-decoration: none;
+    }   
+  
+  /* sidebar close button */
+        .sidebar-close {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+.navbar, ul {
+    list-style: none;
+    margin: 1px;
+    display: flex;
+}
+
+.navbar, li {
+    margin: 2px;
+}
+
+.navbar, a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.background {
+    background-image: url(image/home-img/bg-home.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.background, img {
+    width: 100%;
+}
+
+.home h1 {
+    color: #fff;
+}
+
+.home p {
+    color: #fff;
+}
+
+.explr-btn {
+    background-color: #AB7E55;
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 10px;
+}
+
+.explr-btn, a {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.explr-btn:hover {
+    background-color: #000000;
+    transition: 0.6s;
+}
