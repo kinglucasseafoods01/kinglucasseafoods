@@ -1,28 +1,62 @@
 /* Responsive design */
 
+html {
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    background-color: #202020;
+}
 /* Mobile devices */
 
 @media only screen and (max-width: 620px) {
     main {
         flex-direction: column;
     }
-    .navbar, ul {
+    .header {
+        padding: 5px;
+    }
+    .logo img {
+        height: auto;
+        margin: 0;
+        font-size: 20px;
+    }
+    .close-btn {
         display: none;
     }
-    .navbar, li, .navbar, a {
+    .navbar {
+        padding: 2px;
         display: none;
-        padding: 22px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #6e6e6e; /* Background color */
+        transition: left 0.3s;
+        z-index: 1000; /* Ensure it’s above other elements */
     }
-    .sidebar {
-        display: none;
-      }
-    #sidebar.sidebar-open {
+    .navbar a {
         display: block;
-      }
+        font-size: 24px;
+    }
+    .navbar-toggle {
+        position: relative;
+        display: block; /* Show toggle button on mobile */
+        float: right;
+        z-index: 1002;
+    }
+    .header .flex .navbar a:hover {
+        font-size: 28px;
+        display: block;
+        background-color: rgb(255, 255, 255);
+    }
     section {
         margin: 10px;
     }
     .background, img {
+        margin-top: 10px;
         height: 420px;
     }
     .home {
@@ -32,48 +66,51 @@
         font-size: 30px;
     }
     .explr-btn {
-        font-size: 20;
+        font-size: 20px;
         display: inline-block;
     }
-
+    .menu {
+        justify-content: center;
+    }
 }
 
 /* Tablets */
-@media only screen and (min-width: 621px) and (max-width: 781px) {
+@media only screen and (min-width: 621px) and (max-width: 785px) {
     main {
         flex-direction: row;
         flex-wrap: wrap;
     }
     section {
-        width: 50%;
-        margin: 10px;
+        margin: 20px;
+        width: 60%;
+        margin: 20px;
     }
-    .navbar, ul {
+    .close-btn {
+        display: none;
+    }
+    .navbar{
+        font-size: 20px;
         justify-content: center;
+    }
+    .navbar-toggle {
+        display: none; /* Show toggle button on mobile */
+    }
+    .logo {
         padding: 10px;
-    }
-    .navbar, li {
-        padding: 5px 15px 5px;
-        font-size: 15px;
-    }
-    .sidebar-toggle {
-        display: none;
-    }
-    .sidebar {
-        display: none;
-      }
-    .sidebar-open {
-        display: none;
+        align-items: center;
+        justify-content: left;
     }
     .home, h1{
         font-size: 40px;
+        margin-top: 80px;
         text-align: center;
     }
     .home, p {
         font-size: 20px;
     }
-    .background, img {
-        height: 450px;
+    .background {
+        margin-top: 10px;
+        height: 650px;
         background-size: cover;
     }
     .explr-btn {
@@ -82,124 +119,129 @@
 }
 
 /* Desktop devices */
-@media only screen and (min-width: 782px) {
+@media only screen and (min-width: 786px) {
     main {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .navbar a {
+    .header .flex {
+        position: relative;
+    }
+    .header .flex .navbar a {
+        color: #000000;
+        text-decoration: none;
+        left: 20px;
+    }
+    .close-btn {
+        display: none;
+    }
+    .navbar {
+        position: sticky;
         font-size: 20px;
-        padding: 15px;
-    }
-    .navbar, ul {
         justify-content: center;
-        padding: 15px;
     }
-    .sidebar-toggle {
-        display: none;
+
+    .navbar-toggle {
+        display: none; /* Show toggle button on mobile */
     }
-    .sidebar {
-        display: none;
-      }
-    .sidebar-open {
-        display: none;
+    .logo {
+        left: 0;
+        align-items: center;
+        justify-content: center;
     }
     section {
-        width: 80%;
+        margin: 40px; /* Reduced margin for better spacing */
+        width: 80%; 
+        padding: 2rem; /* Added padding for better content spacing */
+        border-radius: 10px; /* Optional: Rounded corners for aesthetics */
     }
     .home {
         align-items: center;
         font-size: 35px;
-        margin: 20vh;
+        text-align: center; /* Center text for better visibility */
     }
-    .background, img {
-        height: 820px;
+    .home, h1 {
+        margin-top: 150px;
+    }
+    .home, p {
+        margin-top: 50px;
+    }
+    .background { 
+        background-position: center;
+        width: auto;
     }
 }
 
-body {
-    background-color: #575656;
+/* side bar 
 
+.close-btn {
+    background-color: #7c7c7c;
+    color: rgb(255, 0, 0);
+    border: none; 
+    padding: 10px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 31vh;
+    z-index: 1005;
+    transition: 0.3s;
+}
+    
+*/
+.close-btn:hover {
+    color: rgb(100, 6, 6);
+    font-size: 25px;
+    transition: 0.3s;
 }
 
+/* sidebar toggle button */
+.navbar-toggle {
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px;
+    padding: 10px; /* Padding */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Navbar desktop/tablet */
 header {
-    background-color: #1a1919;
     color: #fff;
     text-align: center;
-    opacity: 0.50;
-}
-
-/* side bar */
-
-/* Style the sidebar toggle button */
-.sidebar-toggle {
     position: fixed;
-    top: 8px;
-    right: 10px;
-    z-index: 1000;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.6s ease-in-out;
-  }
-  
-  /* Style the sidebar */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 250px;
-            height: 100vh;
-            background-color: #333;
-            padding: 20px;
-            transition: transform 0.3s ease-in-out;
-            overflow-y: auto; /* Add this to prevent scrollbar issues */
-        }
-  
-    .sidebar-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-  
-.sidebar-nav li {
-    margin-bottom: 20px;
-}
-  
-    .sidebar-nav a {
-        color: #fff;
-        text-decoration: none;
-    }   
-  
-  /* sidebar close button */
-        .sidebar-close {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-.navbar, ul {
-    list-style: none;
-    margin: 1px;
-    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(85, 85, 85);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 100;
 }
 
-.navbar, li {
-    margin: 2px;
+.header .flex {
+    position: relative;
+    padding: 40px;
 }
 
-.navbar, a {
-    color: #fff;
+.logo {
+    float: left;
+    left: 0;
+    height: 30px;
+    width: auto;
+}
+
+.header .flex .navbar a {
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    padding: 15px;
+    transition: 0.6s;
+}
+
+.header .flex .navbar a:hover {
+    color: black;
+    transition: 0.6s;
 }
 
 main {
@@ -249,4 +291,11 @@ section {
 .explr-btn:hover {
     background-color: #000000;
     transition: 0.6s;
+}
+
+/* Menu page */
+
+.bgmenu {
+    background-color: aquamarine;
+    background-position: center;
 }
