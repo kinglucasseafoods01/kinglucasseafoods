@@ -31,11 +31,52 @@
             <a href="#menu" class="explr-btn">Explore Menu</a>
         </section>
     </div>
-        <section class="menu" id="menu">
-            <div class="menu-container">
-                <img src="" alt="PRODUCT">
-        </section>
-    </div>
+        <div class="menu-background">
+            <section class="menu" id="menu">
+                <div class="menu-container">
+                    <div class="slide" id="slide1">
+                        <img src="food1.jpg" alt="Food Item 1">
+                        <h3>Food Item 1</h3>
+                        <p>Description of Food Item 1.</p>
+                    </div>
+                    <div class="slide" id="slide2">
+                        <img src="food2.jpg" alt="Food Item 2">
+                        <h3>Food Item 2</h3>
+                        <p>Description of Food Item 2.</p>
+                    </div>
+                    <div class="slide" id="slide3">
+                        <img src="food3.jpg" alt="Food Item 3">
+                        <h3>Food Item 3</h3>
+                        <p>Description of Food Item 3.</p>
+                    </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </section>
+        </div>
+            <div class="about-background">
+                <section class="about" id="about">
+                    <div class="about-container">
+                        <div class="about-text">
+                            <h2>About Us</h2>
+                            <p>Welcome to King Lucas, your premier destination for fresh crabs and seafood. Our commitment to quality and sustainability ensures that you receive the best products available. With years of experience in the seafood industry, we take pride in delivering exceptional service and delicious dishes that will satisfy your cravings.</p>
+                            <p>Join us on a culinary journey and explore the rich flavors of the sea. Whether you're dining in or taking out, we guarantee a delightful experience with every bite.</p>
+                        </div>
+                        <div class="about-image">
+                            <img src="about-image.jpg" alt="About King Lucas Seafood">
+                        </div>
+                    </div>
+                </section>
+            </div>
+    <section class="gallery">
+        <div class="gallery-item"><img src="image1.jpg" alt="Image 1"></div>
+            <div class="gallery-item"><img src="image2.jpg" alt="Image 2"></div>
+                <div class="gallery-item"><img src="image3.jpg" alt="Image 3"></div>
+                    <div class="gallery-item"><img src="image4.jpg" alt="Image 4"></div>
+                <div class="gallery-item"><img src="image5.jpg" alt="Image 5"></div>
+            <div class="gallery-item"><img src="image6.jpg" alt="Image 6"></div>
+        <!-- Add more items as needed -->
+    </section>
 </main>
     <script src="script.js"></script>
 </body>

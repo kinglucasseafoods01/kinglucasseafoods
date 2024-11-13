@@ -72,6 +72,10 @@ body {
     .menu {
         justify-content: center;
     }
+    .gallery-item {
+        flex: 1 1 100%; /* Stacks items on top of each other on small screens */
+        max-width: 100%;
+    }
 }
 
 /* Tablets */
@@ -156,6 +160,7 @@ body {
         border-radius: 10px; /* Optional: Rounded corners for aesthetics */
     }
     .home {
+        min-height: 850px;
         align-items: center;
         font-size: 35px;
         text-align: center; /* Center text for better visibility */
@@ -170,31 +175,13 @@ body {
         background-position: center;
         width: auto;
     }
+    .gallery-item {
+        flex: 1 1 calc(50% - 10px); /* Adjusts to 2 items per row on smaller screens */
+        max-width: calc(50% - 10px);
+    }
 }
 
 /* side bar 
-
-.close-btn {
-    background-color: #7c7c7c;
-    color: rgb(255, 0, 0);
-    border: none; 
-    padding: 10px; 
-    font-size: 20px; 
-    cursor: pointer; 
-    border-radius: 5px;
-    position: absolute;
-    top: 5px;
-    right: 31vh;
-    z-index: 1005;
-    transition: 0.3s;
-}
-    
-*/
-.close-btn:hover {
-    color: rgb(100, 6, 6);
-    font-size: 25px;
-    transition: 0.3s;
-}
 
 /* sidebar toggle button */
 .navbar-toggle {
@@ -295,7 +282,139 @@ section {
 
 /* Menu page */
 
-.bgmenu {
-    background-color: aquamarine;
-    background-position: center;
+.menu-background {
+    background-color: antiquewhite;
+}
+
+.menu {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    min-height: 800px; /* Set a minimum height for the menu */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.menu-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(192, 8, 8, 0.7); /* Darker background for better visibility */
+    color: white;
+    border: none;
+    padding: 15px 25px; /* Increased padding for larger buttons */
+    font-size: 18px; /* Larger font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the images */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+}
+
+/* about */
+.about-background {
+    background-color: rgb(117, 80, 11);
+}
+.about {
+    padding: 20px 10px; /* Add more padding for better spacing */
+    background-color: #ffffff; /* Light background for contrast */
+}
+
+.about-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    max-width: 1200px; /* Max width for the container */
+    margin: auto; /* Center the container */
+    text-align: center; /* Center text within the container */
+}
+
+.about-text {
+    flex: 1; /* Allow the text section to grow */
+    padding: 0 20px; /* Space around the text */
+}
+
+.about-text h2 {
+    font-size: 2.5em; /* Larger font for the title */
+    margin-bottom: 20px; /* Space below the title */
+    justify-content: center;
+}
+
+.about-text p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+.about-image {
+    flex: 1; /* Allow the image section to grow */
+    display: flex; /* Use flexbox for centering the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.about-image img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.gallery-container {
+    width: 90%; /* Set a width for the container */
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    background-color: #fff; /* Background color for the gallery */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Space between items */
+}
+
+.gallery-item {
+    flex: 1 1 calc(25% - 20px); /* Adjusts to 4 items per row with space for gaps */
+    max-width: calc(25% - 20px); /* Prevents items from exceeding this width */
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+}
+
+.gallery-item img {
+    width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds shadow to images */
 }
