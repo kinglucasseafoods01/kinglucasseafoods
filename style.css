@@ -283,7 +283,7 @@ section {
 /* Menu page */
 
 .menu-background {
-    background-color: antiquewhite;
+    background-color: rgb(116, 116, 116);
 }
 
 .menu {
@@ -317,7 +317,7 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(192, 8, 8, 0.7); /* Darker background for better visibility */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better visibility */
     color: white;
     border: none;
     padding: 15px 25px; /* Increased padding for larger buttons */
@@ -342,7 +342,7 @@ section {
 
 /* about */
 .about-background {
-    background-color: rgb(117, 80, 11);
+    background-color: rgb(0, 0, 0);
 }
 .about {
     padding: 20px 10px; /* Add more padding for better spacing */
@@ -355,7 +355,7 @@ section {
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
     max-width: 1200px; /* Max width for the container */
-    margin: auto; /* Center the container */
+    margin-top: 20vh;
     text-align: center; /* Center text within the container */
 }
 
