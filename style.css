@@ -77,10 +77,10 @@ body {
         max-width: 800px;
         min-height: 520px; 
     }
-    .slide, p {
-        font-size: 5px;
-        padding-left: 25px;
-        padding-right: 25px;
+    .slide p {
+        font-size: 6%;
+        margin-left: 30px;
+        margin-right: 30px;
     }
     .about-background {
         font-size: 9px;
