@@ -8,7 +8,7 @@ html {
 body {
     background-color: #202020;
 }
-/* Mobile devices */
+/* Mobile devices............................................................................................................................. */
 
 @media only screen and (max-width: 621px) {
     main {
@@ -35,9 +35,9 @@ body {
         width: 250px;
         height: 100%;
         color: #ffffff;
-        background-color: #1d1d1d; /* Background color */
+        background-color: #1d1d1d;
         transition: left 0.3s;
-        z-index: 1000; /* Ensure it’s above other elements */
+        z-index: 1000;
     }
     .navbar a {
         display: block;
@@ -45,7 +45,7 @@ body {
     }
     .navbar-toggle {
         position: relative;
-        display: block; /* Show toggle button on mobile */
+        display: block;
         float: right;
         z-index: 1002;
     }
@@ -74,7 +74,11 @@ body {
     }
     .menu {
         max-width: 800px;
-        min-height: 520px; /* Set a minimum height for the menu */
+        min-height: 520px; 
+    }
+    .slide p {
+        padding-left: 25px;
+        padding-right: 25px;
     }
     .about-background {
         max-height: 780px;
@@ -87,7 +91,7 @@ body {
     }
 }
 
-/* Tablets */
+/* Tablets.......................................................................................................................... */
 @media only screen and (min-width: 620px) and (max-width: 850px) {
     main {
         flex-direction: column;
@@ -121,9 +125,9 @@ body {
         width: 250px;
         height: 100%;
         color: #ffffff;
-        background-color: #1d1d1d; /* Background color */
+        background-color: #1d1d1d;
         transition: left 0.3s;
-        z-index: 1000; /* Ensure it’s above other elements */
+        z-index: 1000;
     }
     .navbar a {
         display: block;
@@ -131,7 +135,7 @@ body {
     }
     .navbar-toggle {
         position: relative;
-        display: block; /* Show toggle button on mobile */
+        display: block;
         float: right;
         z-index: 1002;
     }
@@ -147,7 +151,7 @@ body {
         font-size: 25px;
         text-align: center;
         max-width: 885px;
-        min-height: 450px; /* Set a minimum height for the menu */
+        min-height: 450px;
     }
     .container {
         display: flex;
@@ -161,7 +165,11 @@ body {
     }
     .menu {
         max-width: 880px;
-        min-height: 720px; /* Set a minimum height for the menu */
+        min-height: 720px;
+    }
+    .slide p {
+        padding-left: 45px;
+        padding-right: 45px;
     }
     .about-background {
         max-height: 780px;
@@ -170,12 +178,12 @@ body {
         flex-direction: column;
     }
     .gallery-item {
-        flex: 1 1 calc(50% - 10px); /* Adjusts to 2 items per row on smaller screens */
+        flex: 1 1 calc(50% - 10px);
         max-width: calc(50% - 10px);
     }
 }
 
-/* Desktop devices */
+/* Desktop devices....................................................................................................................... */
 @media only screen and (min-width: 851px) {
     main {
         flex-direction: row;
@@ -200,7 +208,7 @@ body {
         justify-content: center;
     }
     .navbar-toggle {
-        display: none; /* Show toggle button on mobile */
+        display: none;
     }
     .logo-container {
         padding: 5px;
@@ -222,14 +230,18 @@ body {
     }
     .menu {
         max-width: 800px;
-        min-height: 890px; /* Set a minimum height for the menu */
+        min-height: 890px;
+    }
+    .slide p {
+        padding-left: 65px;
+        padding-right: 65px;
     }
     .about-container {
-        flex-direction: row; /* Align items in a row */
+        flex-direction: row;
         margin-top: 20vh;
     }
     .gallery-item {
-        flex: 1 1 calc(50% - 10px); /* Adjusts to 2 items per row on smaller screens */
+        flex: 1 1 calc(50% - 10px); 
         max-width: calc(50% - 10px);
     }
 }
@@ -239,13 +251,13 @@ body {
 /* sidebar toggle button */
 
 .navbar-toggle {
-    background-color: #333; /* Background color */
-    color: white; /* Text color */
-    border: none; /* No border */
+    background-color: #333; 
+    color: white; 
+    border: none; 
     border-radius: 5px;
-    padding: 10px; /* Padding */
-    font-size: 20px; /* Font size */
-    cursor: pointer; /* Pointer cursor */
+    padding: 10px; 
+    font-size: 20px; 
+    cursor: pointer; 
     display: hidden;
 }
 
@@ -273,15 +285,15 @@ header {
 
 .header .flex {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center; 
     position: relative;
 }
 
 .logo-container {
     float: left;
-    display: flex; /* Flexbox for the logo and text */
-    align-items: center; /* Center items horizontally */
+    display: flex; 
+    align-items: center; 
 }
 
 .logo img {
@@ -293,9 +305,9 @@ header {
 }
 
 .logo-text {
-    margin-top: 10px; /* Space between logo and text */
-    color: #ffffff; /* Text color */
-    font-size: 16px; /* Adjust font size as needed */
+    margin-top: 10px; 
+    color: #ffffff; 
+    font-size: 16px; 
 }
 
 .header .flex .navbar a {
@@ -339,29 +351,29 @@ section {
     position: relative;
     margin: auto;
     overflow: hidden;
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
 .container {
-    padding: 20px; /* Add some padding inside the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .home-text {
-    flex: 1; /* Allow the text section to grow */
-    padding: 0 20px; /* Space around the text */
+    flex: 1;
+    padding: 0 20px; 
 }
 
 .home-text h1 {
-    margin-bottom: 20px; /* Space below the title */
+    margin-bottom: 20px; 
     justify-content: center;
 }
 
 .home-text p {
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 15px; /* Space between paragraphs */
+    line-height: 1.6; 
+    margin-bottom: 15px; 
 }
 
 .explr-btn {
@@ -397,9 +409,9 @@ section {
     position: relative;
     margin: auto;
     overflow: hidden;
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .menu-container {
@@ -422,15 +434,15 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better visibility */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
-    padding: 15px 25px; /* Increased padding for larger buttons */
-    font-size: 18px; /* Larger font size */
-    border-radius: 5px; /* Rounded corners */
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
-    z-index: 10; /* Ensure buttons are above the images */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    z-index: 10;
+    transition: background-color 0.3s;
 }
 
 .prev {
@@ -442,7 +454,7 @@ section {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+    background-color: rgba(0, 0, 0, 0.9); 
 }
 
 /* about............................................................................................................ */
@@ -452,58 +464,58 @@ section {
 }
 .about {
     color: #ffffff;
-    padding: 20px 10px; /* Add more padding for better spacing */
-    background-color: #181818; /* Light background for contrast */
+    padding: 20px 10px; 
+    background-color: #181818; 
 }
 
 .about-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    max-width: 1200px; /* Max width for the container */
-    text-align: center; /* Center text within the container */
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    max-width: 1200px;
+    text-align: center;
 }
 
 .about-text {
-    flex: 1; /* Allow the text section to grow */
-    padding: 0 20px; /* Space around the text */
+    flex: 1;
+    padding: 0 20px;
 }
 
 .about-text h2 {
-    font-size: 2.5em; /* Larger font for the title */
-    margin-bottom: 20px; /* Space below the title */
+    font-size: 2.5em;
+    margin-bottom: 20px;
     justify-content: center;
 }
 
 .about-text p {
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 15px; /* Space between paragraphs */
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .about-image {
-    flex: 1; /* Allow the image section to grow */
-    display: flex; /* Use flexbox for centering the image */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .about-image img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* gallery.......................................................................... */
 
 .gallery-container {
-    width: 90%; /* Set a width for the container */
-    max-width: 1200px; /* Maximum width for larger screens */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Padding around the container */
-    background-color: #1b1b1b; /* Background color for the gallery */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+    width: 90%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; 
+    background-color: #1b1b1b; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .gallery-background {
@@ -512,22 +524,22 @@ section {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    justify-content: center; /* Center items horizontally */
-    gap: 10px; /* Space between items */
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px; 
 }
 
 .gallery-item {
-    flex: 1 1 calc(25% - 20px); /* Adjusts to 4 items per row with space for gaps */
-    max-width: calc(25% - 20px); /* Prevents items from exceeding this width */
-    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px); 
+    box-sizing: border-box; 
 }
 
 .gallery-item img {
-    width: 100%; /* Makes images responsive */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Optional: adds rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds shadow to images */
+    width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 /* Footer */
@@ -546,7 +558,7 @@ section {
 }
 
 .footer-logo img {
-    max-width: 100px; /* Adjust size as needed */
+    max-width: 100px;
 }
 
 .footer-links, .footer-about {
