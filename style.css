@@ -10,7 +10,7 @@ body {
 }
 /* Mobile devices............................................................................................................................. */
 
-@media only screen and (max-width: 621px) {
+@media only screen and (max-width: 649px) {
     main {
         flex-direction: column;
     }
@@ -44,6 +44,7 @@ body {
         font-size: 24px;
     }
     .navbar-toggle {
+        font-size: 25px; 
         position: relative;
         display: block;
         float: right;
@@ -92,26 +93,18 @@ body {
 }
 
 /* Tablets.......................................................................................................................... */
-@media only screen and (min-width: 620px) and (max-width: 850px) {
+@media only screen and (min-width: 650px) and (max-width: 850px) {
     main {
         flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .header {
-        padding: 5px;
-    }
-    .header .flex{
-        padding: 50px;
     }
     .logo-container {
-        padding: 5px;
         flex-direction: row;
     }
     .logo img {
-        padding: 20px;
+        padding: 10px;
         top: 10px;
         min-height: 20px;
-        max-width: 70px;
+        max-width: 80px;
     }
     .close-btn {
         display: none;
@@ -134,6 +127,7 @@ body {
         font-size: 24px;
     }
     .navbar-toggle {
+        font-size: 25px; 
         position: relative;
         display: block;
         float: right;
@@ -150,22 +144,21 @@ body {
     .home {
         font-size: 25px;
         text-align: center;
-        max-width: 885px;
-        min-height: 450px;
+        min-height: 520px;
+        max-width: 820px;
     }
     .container {
         display: flex;
         justify-content: center;
-        max-width: 880px;
-        max-height: 780px;
+        max-width: 820px
     }
     .explr-btn {
         font-size: 20px;
         display: inline-block;
     }
     .menu {
-        max-width: 880px;
-        min-height: 720px;
+        max-width: 800px;
+        min-height: 520px; 
     }
     .slide p {
         padding-left: 45px;
@@ -178,8 +171,7 @@ body {
         flex-direction: column;
     }
     .gallery-item {
-        flex: 1 1 calc(50% - 10px);
-        max-width: calc(50% - 10px);
+        flex: 1 1 100%; /* Stacks items on top of each other on small screens */
     }
 }
 
@@ -256,7 +248,6 @@ body {
     border: none; 
     border-radius: 5px;
     padding: 10px; 
-    font-size: 20px; 
     cursor: pointer; 
     display: hidden;
 }
