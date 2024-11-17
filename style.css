@@ -10,17 +10,18 @@ body {
 }
 /* Mobile devices */
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 621px) {
     main {
         flex-direction: column;
     }
-    .header {
-        padding: 5px;
+    .logo-container {
+        flex-direction: row;
     }
     .logo img {
-        height: auto;
-        margin: 0;
-        font-size: 20px;
+        padding: 10px;
+        top: 10px;
+        min-height: 20px;
+        max-width: 80px;
     }
     .close-btn {
         display: none;
@@ -51,30 +52,32 @@ body {
     .header .flex .navbar a:hover {
         font-size: 28px;
         display: block;
-        background-color: rgb(109, 109, 109);
+        background-color: rgb(255, 255, 255);
     }
     section {
         margin: 10px;
     }
-    .background, img {
-        margin-top: 10px;
-        height: 420px;
-    }
     .home {
+        font-size: 25px;
         text-align: center;
+        min-height: 520px;
+        max-width: 620px;
     }
-    .home, a {
-        font-size: 30px;
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 720px
     }
     .explr-btn {
         font-size: 20px;
         display: inline-block;
     }
     .menu {
-        justify-content: center;
+        max-width: 800px;
+        min-height: 520px; /* Set a minimum height for the menu */
     }
     .about-background {
-        max-height: 580px;
+        max-height: 780px;
     }
     .about-container {
         flex-direction: column;
@@ -85,60 +88,102 @@ body {
 }
 
 /* Tablets */
-@media only screen and (min-width: 621px) and (max-width: 785px) {
+@media only screen and (min-width: 620px) and (max-width: 850px) {
     main {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
-    section {
-        margin: 20px;
-        width: 60%;
-        margin: 20px;
+    .header {
+        padding: 5px;
+    }
+    .header .flex{
+        padding: 50px;
+    }
+    .logo-container {
+        padding: 5px;
+        flex-direction: row;
+    }
+    .logo img {
+        padding: 20px;
+        top: 10px;
+        min-height: 20px;
+        max-width: 70px;
     }
     .close-btn {
         display: none;
     }
-    .navbar{
-        font-size: 20px;
-        justify-content: center;
+    .navbar {
+        padding: 2px;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        color: #ffffff;
+        background-color: #1d1d1d; /* Background color */
+        transition: left 0.3s;
+        z-index: 1000; /* Ensure it’s above other elements */
+    }
+    .navbar a {
+        display: block;
+        font-size: 24px;
     }
     .navbar-toggle {
-        display: none; /* Show toggle button on mobile */
+        position: relative;
+        display: block; /* Show toggle button on mobile */
+        float: right;
+        z-index: 1002;
     }
-    .logo {
-        padding: 10px;
-        align-items: center;
-        justify-content: left;
+    .header .flex .navbar a:hover {
+        font-size: 28px;
+        display: block;
+        background-color: rgb(255, 255, 255);
     }
-    .home, h1{
-        font-size: 40px;
-        margin-top: 80px;
+    section {
+        margin: 10px;
+    }
+    .home {
+        font-size: 25px;
         text-align: center;
+        max-width: 885px;
+        min-height: 450px; /* Set a minimum height for the menu */
     }
-    .home, p {
-        font-size: 20px;
-    }
-    .background {
-        margin-top: 10px;
-        height: 650px;
-        background-size: cover;
+    .container {
+        display: flex;
+        justify-content: center;
+        max-width: 880px;
+        max-height: 780px;
     }
     .explr-btn {
-        font-size: 25px;
+        font-size: 20px;
+        display: inline-block;
+    }
+    .menu {
+        max-width: 880px;
+        min-height: 720px; /* Set a minimum height for the menu */
+    }
+    .about-background {
+        max-height: 780px;
     }
     .about-container {
-        flex-direction: row; /* Align items in a row */
-        margin-top: 20vh;
+        flex-direction: column;
+    }
+    .gallery-item {
+        flex: 1 1 calc(50% - 10px); /* Adjusts to 2 items per row on smaller screens */
+        max-width: calc(50% - 10px);
     }
 }
 
 /* Desktop devices */
-@media only screen and (min-width: 786px) {
+@media only screen and (min-width: 851px) {
     main {
         flex-direction: row;
         flex-wrap: wrap;
     }
     .header .flex {
+        padding: 50px;
+        margin-right: 120px;
         position: relative;
     }
     .header .flex .navbar a {
@@ -154,36 +199,30 @@ body {
         font-size: 20px;
         justify-content: center;
     }
-
     .navbar-toggle {
         display: none; /* Show toggle button on mobile */
     }
-    .logo {
-        left: 0;
-        align-items: center;
-        justify-content: center;
+    .logo-container {
+        padding: 5px;
+        flex-direction: column;
     }
-    section {
-        margin: 40px; /* Reduced margin for better spacing */
-        width: 80%; 
-        padding: 2rem; /* Added padding for better content spacing */
-        border-radius: 10px; /* Optional: Rounded corners for aesthetics */
+    .logo img {
+        top: 40px;
+        max-width: 80px;
     }
     .home {
+        font-size: 30px;
+        text-align: center;
         min-height: 850px;
-        align-items: center;
-        font-size: 35px;
-        text-align: center; /* Center text for better visibility */
+        max-width: 860px;
     }
-    .home, h1 {
-        margin-top: 150px;
+    .container {
+        display: flex;
+        justify-content: center;
     }
-    .home, p {
-        margin-top: 50px;
-    }
-    .background { 
-        background-position: center;
-        width: auto;
+    .menu {
+        max-width: 800px;
+        min-height: 890px; /* Set a minimum height for the menu */
     }
     .about-container {
         flex-direction: row; /* Align items in a row */
@@ -195,9 +234,10 @@ body {
     }
 }
 
-/* side bar 
+/* sidebar....................................................................................................................................... */
 
 /* sidebar toggle button */
+
 .navbar-toggle {
     background-color: #333; /* Background color */
     color: white; /* Text color */
@@ -206,9 +246,19 @@ body {
     padding: 10px; /* Padding */
     font-size: 20px; /* Font size */
     cursor: pointer; /* Pointer cursor */
+    display: hidden;
 }
 
-/* Navbar desktop/tablet */
+.sidebar {
+    display: hidden;
+}
+
+.sidebar a {
+    display: hidden;
+}
+
+/* Navbar desktop/tablet................................................................................................... */
+
 header {
     color: #fff;
     text-align: center;
@@ -216,27 +266,42 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgb(32, 32, 32);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: rgba(99, 99, 99, 0.521);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.253);
     z-index: 100;
 }
 
 .header .flex {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
     position: relative;
-    padding: 40px;
 }
 
-.logo {
+.logo-container {
     float: left;
-    left: 0;
-    height: 30px;
-    width: auto;
+    display: flex; /* Flexbox for the logo and text */
+    align-items: center; /* Center items horizontally */
+}
+
+.logo img {
+    display: flex;
+    border-radius: 100px;
+    min-height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    margin-top: 10px; /* Space between logo and text */
+    color: #ffffff; /* Text color */
+    font-size: 16px; /* Adjust font size as needed */
 }
 
 .header .flex .navbar a {
-    color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 15px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
     transition: 0.6s;
 }
 
@@ -257,6 +322,8 @@ section {
     min-height: 100vh;
 }
 
+/* home........................................................................................................... */
+
 .background {
     background-image: linear-gradient( 90deg, rgb(0, 0, 0), transparent 80%), url(image/home-img/homebg.png);
     background-position: center;
@@ -267,20 +334,42 @@ section {
     width: 100%;
 }
 
-.home h1 {
-    color: #fff;
+.home {
+    color: #ffffff;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
-.home p {
-    color: #fff;
+.container {
+    padding: 20px; /* Add some padding inside the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.home-text {
+    flex: 1; /* Allow the text section to grow */
+    padding: 0 20px; /* Space around the text */
+}
+
+.home-text h1 {
+    margin-bottom: 20px; /* Space below the title */
+    justify-content: center;
+}
+
+.home-text p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px; /* Space between paragraphs */
 }
 
 .explr-btn {
     background-color: #000000;
     text-decoration: none;
-    border: none;
-    border-radius: 15px;
-    padding: 6px 10px;
+    border: solid #ffffff;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
 .explr-btn, a {
@@ -290,6 +379,7 @@ section {
 }
 
 .explr-btn:hover {
+    border: solid  #000000;
     color: #000000;
     background-color: #ffffff;
     transition: 0.6s;
@@ -303,11 +393,10 @@ section {
 
 .menu {
     color: #ffffff;
+    background-color: #242424;
     position: relative;
-    max-width: 600px;
     margin: auto;
     overflow: hidden;
-    min-height: 800px; /* Set a minimum height for the menu */
     display: flex; /* Use flexbox for centering */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
@@ -325,7 +414,7 @@ section {
 }
 
 .slide img {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
@@ -439,4 +528,50 @@ section {
     height: auto; /* Maintains aspect ratio */
     border-radius: 8px; /* Optional: adds rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds shadow to images */
+}
+
+/* Footer */
+
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    min-height: 420px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    max-width: 100px; /* Adjust size as needed */
+}
+
+.footer-links, .footer-about {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+    padding: 5px;
+    transition: 0.6s;
+}
+
+.footer-links a, .footer-about a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-links a:hover {
+    transition: ease 0.6s;
+    color: rgb(201, 96, 21);
 }
