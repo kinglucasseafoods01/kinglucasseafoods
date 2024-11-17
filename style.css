@@ -51,7 +51,7 @@ body {
         z-index: 1002;
     }
     .header .flex .navbar a:hover {
-        font-size: 28px;
+        font-size: 25px;
         display: block;
         background-color: rgb(255, 255, 255);
     }
@@ -59,7 +59,7 @@ body {
         margin: 10px;
     }
     .home {
-        font-size: 25px;
+        font-size: 15px;
         text-align: center;
         min-height: 520px;
         max-width: 620px;
@@ -78,10 +78,12 @@ body {
         min-height: 520px; 
     }
     .slide p {
-        padding-left: 25px;
-        padding-right: 25px;
+        font-size: 9px;
+        padding-left: 45px;
+        padding-right: 45px;
     }
     .about-background {
+        font-size: 9px;
         max-height: 780px;
     }
     .about-container {
@@ -89,6 +91,12 @@ body {
     }
     .gallery-item {
         flex: 1 1 100%; /* Stacks items on top of each other on small screens */
+    }
+    .footer {
+        font-size: 15px;
+    }
+    .footer a {
+        font-size: 10px;
     }
 }
 
@@ -564,12 +572,11 @@ section {
 
 .footer-links ul li {
     margin: 5px 0;
-    padding: 5px;
+    padding: 2px;
     transition: 0.6s;
 }
 
 .footer-links a, .footer-about a {
-    font-size: 25px;
     text-decoration: none;
     color: #333;
 }
