@@ -59,7 +59,7 @@ body {
         margin: 10px;
     }
     .home {
-        font-size: 15px;
+        font-size: 18px;
         text-align: center;
         min-height: 520px;
         max-width: 620px;
@@ -77,10 +77,10 @@ body {
         max-width: 800px;
         min-height: 520px; 
     }
-    .slide p {
-        font-size: 9px;
-        padding-left: 45px;
-        padding-right: 45px;
+    .slide, p {
+        font-size: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
     .about-background {
         font-size: 9px;
