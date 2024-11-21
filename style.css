@@ -74,16 +74,17 @@ body {
         display: inline-block;
     }
     .menu {
+        border-radius: 20px;
         max-width: 800px;
         min-height: 520px; 
     }
     .slide p {
-        font-size: 6%;
+        font-size: 12px;
         margin-left: 30px;
         margin-right: 30px;
     }
     .about-background {
-        font-size: 9px;
+        font-size: 12px;
         max-height: 780px;
     }
     .about-container {
@@ -96,7 +97,7 @@ body {
         font-size: 15px;
     }
     .footer a {
-        font-size: 10px;
+        font-size: 18px;
     }
 }
 
@@ -199,9 +200,6 @@ body {
         text-decoration: none;
         left: 20px;
     }
-    .close-btn {
-        display: none;
-    }
     .navbar {
         position: sticky;
         font-size: 20px;
@@ -240,9 +238,15 @@ body {
         flex-direction: row;
         margin-top: 20vh;
     }
+    .about-item {
+        width: 540px;
+    }
     .gallery-item {
         flex: 1 1 calc(50% - 10px); 
         max-width: calc(50% - 10px);
+    }
+    .footer {
+        font-size: 20px;
     }
 }
 
@@ -356,6 +360,7 @@ section {
 }
 
 .container {
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.788), rgba(0,0,0));
     padding: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
@@ -399,12 +404,12 @@ section {
 /* menu......................................................................................................... */
 
 .menu-background {
-    background-color: rgb(39, 39, 39);
+    background: linear-gradient(3deg, rgb(0, 0, 0), rgb(28, 28, 28));
 }
 
 .menu {
     color: #ffffff;
-    background-color: #242424;
+    background-color: #383838;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -433,7 +438,7 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.25));
     color: white;
     border: none;
     padding: 15px 25px;
@@ -453,18 +458,19 @@ section {
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.9); 
+    color: #000000;
+    background-color: rgb(255, 255, 255); 
 }
 
 /* about............................................................................................................ */
 
 .about-background {
-    background-color: rgb(0, 0, 0);
+    background: linear-gradient(5deg, rgb(20, 20, 20), rgb(0, 0, 0));
 }
 .about {
     color: #ffffff;
     padding: 20px 10px; 
-    background-color: #181818; 
+    background-color: none; 
 }
 
 .about-container {
@@ -498,11 +504,8 @@ section {
     align-items: center; 
 }
 
-.about-image img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.about-item img{
+    border-radius: 30px;
 }
 
 /* gallery.......................................................................... */
@@ -511,14 +514,13 @@ section {
     width: 90%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px; 
-    background-color: #1b1b1b; 
+    padding: 20px;  
     border-radius: 8px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .gallery-background {
-    background-color: #242424;
+    background: linear-gradient(2deg, rgba(88, 88, 88, 0.613), rgb(19, 19, 19));
 }
 
 .gallery {
@@ -544,20 +546,40 @@ section {
 /* Footer */
 
 .footer {
-    background-color: #ffffff;
-    padding: 20px;
+    color: #ffffff;
+    background: linear-gradient(0deg, rgb(3, 21, 71), rgba(88, 88, 88, 0.590));
+    padding: 15px;
     text-align: center;
     min-height: 420px;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .footer-logo img {
-    max-width: 100px;
+    max-width: 150px;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 100px;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social img {
+    height: auto;
+    width: 60px;
+    border: solid #ffffff;
+    border-radius: 200px;
 }
 
 .footer-links, .footer-about {
@@ -578,10 +600,10 @@ section {
 
 .footer-links a, .footer-about a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
 }
 
 .footer-links a:hover {
     transition: ease 0.6s;
-    color: rgb(201, 96, 21);
+    color: rgb(0, 0, 0);
 }
