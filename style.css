@@ -8,6 +8,7 @@ html {
 body {
     background-color: #202020;
 }
+
 /* Mobile devices............................................................................................................................. */
 
 @media only screen and (max-width: 649px) {
@@ -35,7 +36,7 @@ body {
         width: 250px;
         height: 100%;
         color: #ffffff;
-        background-color: #1d1d1d;
+        background-color: #1d1d1d65;
         transition: left 0.3s;
         z-index: 1000;
     }
@@ -51,8 +52,9 @@ body {
         z-index: 1002;
     }
     .header .flex .navbar a:hover {
-        font-size: 25px;
+        font-size: 20px;
         display: block;
+        border-radius: 10px;
         background-color: rgb(255, 255, 255);
     }
     section {
@@ -61,7 +63,7 @@ body {
     .home {
         font-size: 18px;
         text-align: center;
-        min-height: 520px;
+        min-height: 420px;
         max-width: 620px;
     }
     .container {
@@ -78,10 +80,13 @@ body {
         max-width: 800px;
         min-height: 520px; 
     }
+    .menu-container {
+        text-align: center;
+    }
     .slide p {
-        font-size: 12px;
-        margin-left: 30px;
-        margin-right: 30px;
+        font-size: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .about-background {
         font-size: 12px;
@@ -91,7 +96,8 @@ body {
         flex-direction: column;
     }
     .gallery-item {
-        flex: 1 1 100%; /* Stacks items on top of each other on small screens */
+        flex: 1 1 calc(100% - 120px); 
+        max-width: calc(100% - 120px);    
     }
     .footer {
         font-size: 15px;
@@ -217,7 +223,7 @@ body {
         max-width: 80px;
     }
     .home {
-        font-size: 30px;
+        font-size: 40px;
         text-align: center;
         min-height: 850px;
         max-width: 860px;
@@ -227,8 +233,12 @@ body {
         justify-content: center;
     }
     .menu {
+        border-radius: 20px;
         max-width: 800px;
         min-height: 890px;
+    }
+    .slide img {
+        border-radius: 20px;
     }
     .slide p {
         padding-left: 65px;
@@ -242,8 +252,8 @@ body {
         width: 540px;
     }
     .gallery-item {
-        flex: 1 1 calc(50% - 10px); 
-        max-width: calc(50% - 10px);
+        flex: 1 1 calc(30% - 20px); 
+        max-width: calc(30% - 20px);
     }
     .footer {
         font-size: 20px;
@@ -360,7 +370,7 @@ section {
 }
 
 .container {
-    background: linear-gradient(0deg, rgba(24, 24, 24, 0.788), rgba(0,0,0));
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.562), rgba(0,0,0));
     padding: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
@@ -404,7 +414,7 @@ section {
 /* menu......................................................................................................... */
 
 .menu-background {
-    background: linear-gradient(3deg, rgb(0, 0, 0), rgb(28, 28, 28));
+    background: linear-gradient(1deg, rgba(0, 0, 0, 0.705), rgba(28, 28, 28, 0.877));
 }
 
 .menu {
@@ -465,8 +475,9 @@ section {
 /* about............................................................................................................ */
 
 .about-background {
-    background: linear-gradient(5deg, rgb(20, 20, 20), rgb(0, 0, 0));
+    background: linear-gradient(5deg, rgba(20, 20, 20, 0.904), rgba(0, 0, 0, 0.74));
 }
+
 .about {
     color: #ffffff;
     padding: 20px 10px; 
@@ -521,6 +532,9 @@ section {
 
 .gallery-background {
     background: linear-gradient(2deg, rgba(88, 88, 88, 0.613), rgb(19, 19, 19));
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
 }
 
 .gallery {
@@ -531,8 +545,6 @@ section {
 }
 
 .gallery-item {
-    flex: 1 1 calc(25% - 20px);
-    max-width: calc(25% - 20px); 
     box-sizing: border-box; 
 }
 
@@ -548,12 +560,13 @@ section {
 .footer {
     color: #ffffff;
     background: linear-gradient(0deg, rgb(3, 21, 71), rgba(88, 88, 88, 0.590));
-    padding: 15px;
+    padding: 5px;
     text-align: center;
     min-height: 420px;
 }
 
 .footer-container {
+    background-image: url(./image/footer-img.png);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -572,7 +585,6 @@ section {
 
 .footer-social li {
     display: inline-block;
-    margin-right: 10px;
 }
 
 .footer-social img {
@@ -580,7 +592,14 @@ section {
     width: 60px;
     border: solid #ffffff;
     border-radius: 200px;
+    transition: 0.6s;
 }
+
+.footer-social img:hover {
+    transition: 0.6s;
+    border: solid #3170e6;
+    border-radius: 100px;
+} 
 
 .footer-links, .footer-about {
     flex: 1;
