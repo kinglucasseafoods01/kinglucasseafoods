@@ -90,7 +90,7 @@ body {
     }
     .about-background {
         font-size: 12px;
-        max-height: 780px;
+        max-height: 880px;
     }
     .about-container {
         flex-direction: column;
@@ -180,7 +180,7 @@ body {
         padding-right: 45px;
     }
     .about-background {
-        max-height: 780px;
+        max-height: 1200px;
     }
     .about-container {
         flex-direction: column;
@@ -246,14 +246,14 @@ body {
     }
     .about-container {
         flex-direction: row;
-        margin-top: 20vh;
+        margin-top: 100vh;
     }
     .about-item {
         width: 540px;
     }
     .gallery-item {
-        flex: 1 1 calc(30% - 20px); 
-        max-width: calc(30% - 20px);
+        flex: 1 1 calc(20% - 20px); 
+        max-width: calc(20% - 20px);
     }
     .footer {
         font-size: 20px;
