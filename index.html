@@ -8,14 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
         <button class="navbar-toggle">☰</button>
-            <div class="logo-container">
-                    <div class="logo">
-                        <a href="#home"><img src="./image/logo.png" alt="Logo"></a>
+                <div class="top-header">
+                    <div class="category-bar">
+                        <ul>
+                            <li><a href="#category1">Crabs</a></li>
+                           <li><a href="#category2">Clams</a></li>
+                            <li><a href="#category3">Crustaceans</a></li>
+                            <li><a href="#category4">Oysters</a></li>
+                            <li><a href="#category5">Lobster</a></li>
+                        </ul> 
                     </div>
-                <div class="logo-text">King Lucas Seafoods</div>
-            </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </div>
+                </div>                                                    
         <div class="flex">
             <nav class="navbar">
                 <a href="#home">Home</a>
@@ -25,51 +35,69 @@
                 <a href="#footer">Contact</a>
             </nav>  
         </div>
+        <div class="logo-container">
+            <div class="logo">
+                <a href="#home"><img src="./image/logo.png" alt="Logo"></a>
+            </div>
+        </div>
     </header>
     
 <main>
-    <div class="container">
-        <div class="background"> 
+    <div class="background"> 
+        <div class="container">
             <section id="home" class="home">
-                <div class="home-text">         
-                    <h1>King Lucas</h1>
-                    <p>Crabs & Seafood Dealers</p>
-                    <a href="#menu" class="explr-btn">Explore Menu</a>
-                </div>  
+                    <div class="home-text">         
+                        <h1>King Lucas</h1>
+                        <p>Crabs & Seafood Dealers</p>
+                        <h5>The seafood that everyone loves</h5>
+                        <a href="#menu" class="explr-btn">Explore Menu</a>
+                    </div>
+                    <div class="home-slider">
+                        <div class="slider-container">
+                            <img src="/image/logo.png" alt="">
+                        </div>
+                    </div>
             </section>
         </div>
     </div>
         <div class="menu-background">
+            <div class="filter-buttons">
+                <button data-name="all" >Show All</button>
+                <button data-name="crabs" >Crabs</button>
+                <button data-name="crustaceans" >Crustaceans</button>
+                <button data-name="oysters" >Oysters</button>
+                <button data-name="lobsters" >Lobsters</button>
+            </div>
             <section class="menu" id="menu">
                 <div class="menu-container">
-                    <div class="slide" id="slide1">
-                        <img src="./image/menu-img/food1.jpg" alt="Food Item 1">
-                        <h3>Lapu-Lapu Fish</h3>
-                        <p>The Lapu Lapu fish, also known as Grouper, is a popular fish in Southeast Asian cuisine. It's a white, firm-fleshed fish with a mild flavor. It's often served steamed, grilled, or fried.</p>
-                        <p>$.2.35 Per Kilo</p>
-                    </div>
-                    <div class="slide" id="slide2">
-                        <img src="./image/menu-img/food2.jpg" alt="Food Item 2">
-                        <h3>Crabs</h3>
-                        <p>Crabs are fascinating crustaceans with ten legs and a hard shell. They scuttle sideways and use their large claws for defense and catching food. They come in many varieties, living in oceans, freshwater, and even on land.
-                            Cooked crab, on the other hand, is a delicious seafood delicacy! The meat has a sweet and delicate flavor and a tender, flaky texture. It's often enjoyed in dishes like crab cakes, crab bisque, or simply steamed with butter.</p>
-                            <p>$.4.15 Per Kilo</p>
-                    </div>
-                    <div class="slide" id="slide3">
-                        <img src="./image/menu-img/food3.jpg" alt="Food Item 3">
-                        <h3>Prawns</h3>
-                        <p>Prawns are delicious crustaceans with long, slender bodies and delicate, sweet flavor. They're often called "shrimp" but are actually a distinct variety. They are enjoyed worldwide, cooked in various ways, from grilling and frying to steaming and adding to soups and stir-fries.</p>
-                        <p>$.1.80 Per Kilo</p>
-                    </div>
-                    <div class="slide" id="slide4">
-                        <img src="./image/menu-img/food4.jpg" alt="Food Item 3">
-                        <h3>Shrimps</h3>
-                        <p>Shrimps are small, tasty crustaceans with a delicate, sweet flavor. They have a curved body and are often found in oceans and freshwater. They're a popular seafood choice worldwide, enjoyed in various dishes like stir-fries, pasta, and soups.</p>
-                        <p>$.2.20 Per Kilo</p>
-                    </div>
+                        <div class="slide" id="slide1">
+                            <img src="./image/menu-img/food1.jpg" alt="Food Item 1">
+                            <h3>Lapu-Lapu Fish</h3>
+                            <p>The Lapu Lapu fish, also known as Grouper, is a popular fish in Southeast Asian cuisine. It's a white, firm-fleshed fish with a mild flavor. It's often served steamed, grilled, or fried.</p>
+                            <p>$.2.35 Per Kilo</p>
+                        </div>
+                        <div class="slide" id="slide2">
+                            <img src="./image/menu-img/food2.jpg" alt="Food Item 2">
+                            <h3>Crabs</h3>
+                            <p>Crabs are fascinating crustaceans with ten legs and a hard shell. They scuttle sideways and use their large claws for defense and catching food. They come in many varieties, living in oceans, freshwater, and even on land.
+                                Cooked crab, on the other hand, is a delicious seafood delicacy! The meat has a sweet and delicate flavor and a tender, flaky texture. It's often enjoyed in dishes like crab cakes, crab bisque, or simply steamed with butter.</p>
+                                <p>$.4.15 Per Kilo</p>
+                        </div>
+                        <div class="slide" id="slide3">
+                            <img src="./image/menu-img/food3.jpg" alt="Food Item 3">
+                            <h3>Prawns</h3>
+                            <p>Prawns are delicious crustaceans with long, slender bodies and delicate, sweet flavor. They're often called "shrimp" but are actually a distinct variety. They are enjoyed worldwide, cooked in various ways, from grilling and frying to steaming and adding to soups and stir-fries.</p>
+                            <p>$.1.80 Per Kilo</p>
+                        </div>
+                        <div class="slide" id="slide4">
+                            <img src="./image/menu-img/food4.jpg" alt="Food Item 3">
+                            <h3>Shrimps</h3>
+                            <p>Shrimps are small, tasty crustaceans with a delicate, sweet flavor. They have a curved body and are often found in oceans and freshwater. They're a popular seafood choice worldwide, enjoyed in various dishes like stir-fries, pasta, and soups.</p>
+                            <p>$.2.20 Per Kilo</p>
+                        </div>
                 </div>
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                    <button class="prev"><</button>
+                    <button class="next">></button>
             </section>
         </div>
             <div class="about-background">

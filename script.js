@@ -31,27 +31,35 @@ window.addEventListener('resize', checkWindowSize);
 checkWindowSize();
 
 // Slide //
+
+// Select elements
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 let currentSlide = 0;
 
+// Function to show the current slide
 function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    if (index >= totalSlides) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = totalSlides - 1;
-    } else {
-        currentSlide = index;
-    }
-
-    const offset = -currentSlide * 100; // Each slide takes up 100% width
-    document.querySelector('.menu-container').style.transform = `translateX(${offset}%)`;
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
 }
 
-function changeSlide(direction) {
-    showSlide(currentSlide + direction);
+// Function to move to the next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
 }
 
-// Initialize the first slide
+// Function to move to the previous slide
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Event listeners for next and previous buttons
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+// Initialize the slider by showing the first slide
 showSlide(currentSlide);
