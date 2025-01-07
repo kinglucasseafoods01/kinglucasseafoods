@@ -1,6 +1,23 @@
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbar = document.querySelector('.navbar');
 
+//Navbar Mobile
+
+document.addEventListener("DOMContentLoaded", function () {
+    const homeLink = document.getElementById("home-link");
+    const categoryBar = document.getElementById("category-bar");
+
+    homeLink.addEventListener("mouseenter", function () {
+        categoryBar.style.opacity = "0.8"; // Optional: Fade the category bar
+    });
+
+    homeLink.addEventListener("mouseleave", function () {
+        categoryBar.style.opacity = "1"; // Restore the category bar
+    });
+});
+
+// Navbar //
+
 // Toggle the navbar when the toggle button is clicked
 navbarToggle.addEventListener('click', () => {
     if (navbar.style.display === 'block') {
@@ -30,36 +47,91 @@ window.addEventListener('resize', checkWindowSize);
 // Initial check when the page loads
 checkWindowSize();
 
-// Slide //
+//Category links//
 
-// Select elements
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let currentSlide = 0;
+// Function to handle category clicks
+function handleCategoryClick(event) {
+    event.preventDefault(); // Prevent default link behavior
 
-// Function to show the current slide
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
+    // Get the data-name attribute of the clicked element
+    const clickedCategory = event.target.getAttribute('data-name');
+
+    // Hide all categories initially
+    const categories = document.querySelectorAll('.menu-background');
+    categories.forEach(cat => cat.style.display = 'none');
+
+    // Show the selected category or all categories based on the clicked data-name
+    if (clickedCategory === 'crabs') {
+        document.getElementById('crabs').style.display = 'block';
+    } else if (clickedCategory === 'mollusk') {
+        document.getElementById('mollusk').style.display = 'block';
+    } else if (clickedCategory === 'crustaceans') {
+        document.getElementById('crustaceans').style.display = 'block';
+    } else if (clickedCategory === 'fish') {
+        document.getElementById('fish').style.display = 'block';
+    } else if (clickedCategory === 'all') {
+        categories.forEach(cat => cat.style.display = 'block'); // Show all categories
+    }
 }
 
-// Function to move to the next slide
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+// Add event listeners to category links
+const categoryLinks = document.querySelectorAll('#category-bar a');
+categoryLinks.forEach(link => {
+    link.addEventListener('click', handleCategoryClick);
+});
 
-// Function to move to the previous slide
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
+// Set #all as the default visible category when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    // Hide all categories initially
+    const categories = document.querySelectorAll('.menu-background');
+    categories.forEach(cat => cat.style.display = 'none');
 
-// Event listeners for next and previous buttons
-nextBtn.addEventListener('click', nextSlide);
-prevBtn.addEventListener('click', prevSlide);
+    // Show all categories by default
+    categories.forEach(cat => cat.style.display = 'block');
+});
 
-// Initialize the slider by showing the first slide
-showSlide(currentSlide);
+// Menu //
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, // Default number of slides per view for smaller screens
+    spaceBetween: 10, // Default space between slides for smaller screens
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      // When window width is >= 576px
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // When window width is >= 768px
+      718: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      // When window width is >= 992px
+      990   : {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      // When window width is >= 1200px
+      993: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+    },
+  });
+
+
+
+

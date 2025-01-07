@@ -6,33 +6,33 @@
     <link rel="icon" type="image/x-icon" href="./image/logo.png">
     <title>kinglucas-seafoods.com</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+    <div id="loading-spinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
 
-    <header class="header">
-        <button class="navbar-toggle">☰</button>
+    <header class="header">   
+        <button class="navbar-toggle">☰</button>  
                 <div class="top-header">
-                    <div class="category-bar">
+                    <div class="category-bar" id="category-bar">
                         <ul>
-                            <li><a href="#category1">Crabs</a></li>
-                           <li><a href="#category2">Clams</a></li>
-                            <li><a href="#category3">Crustaceans</a></li>
-                            <li><a href="#category4">Oysters</a></li>
-                            <li><a href="#category5">Lobster</a></li>
+                            <li><a href="#crabs" data-name="crabs">Crabs</a></li>
+                            <li><a href="#mollusk" data-name="mollusk">Mollusk</a></li>
+                            <li><a href="#crustaceans" data-name="crustaceans">Crustaceans</a></li>
+                            <li><a href="#fish" data-name="fish">Fish</a></li>
+                            <li><a href="#all" data-name="all">All Products</a></li>
                         </ul> 
-                    </div>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit">Search</button>
                     </div>
                 </div>                                                    
         <div class="flex">
             <nav class="navbar">
-                <a href="#home">Home</a>
+                <a href="#home" id="home-link">Home</a>
                 <a href="#menu">Products</a>
                 <a href="#about">About</a>
                 <a href="#gallery">Gallery</a>
-                <a href="#footer">Contact</a>
+                <a href="#contact">Contact</a>
             </nav>  
         </div>
         <div class="logo-container">
@@ -44,13 +44,13 @@
     
 <main>
     <div class="background"> 
-        <div class="container">
+        <div class="home-container">
             <section id="home" class="home">
                     <div class="home-text">         
                         <h1>King Lucas</h1>
                         <p>Crabs & Seafood Dealers</p>
-                        <h5>The seafood that everyone loves</h5>
-                        <a href="#menu" class="explr-btn">Explore Menu</a>
+                        <p>The seafood that everyone loves</p>
+                        <a href="#crabs" class="explr-btn">Explore Menu</a>
                     </div>
                     <div class="home-slider">
                         <div class="slider-container">
@@ -60,111 +60,345 @@
             </section>
         </div>
     </div>
-        <div class="menu-background">
-            <div class="filter-buttons">
-                <button data-name="all" >Show All</button>
-                <button data-name="crabs" >Crabs</button>
-                <button data-name="crustaceans" >Crustaceans</button>
-                <button data-name="oysters" >Oysters</button>
-                <button data-name="lobsters" >Lobsters</button>
-            </div>
-            <section class="menu" id="menu">
-                <div class="menu-container">
-                        <div class="slide" id="slide1">
-                            <img src="./image/menu-img/food1.jpg" alt="Food Item 1">
-                            <h3>Lapu-Lapu Fish</h3>
-                            <p>The Lapu Lapu fish, also known as Grouper, is a popular fish in Southeast Asian cuisine. It's a white, firm-fleshed fish with a mild flavor. It's often served steamed, grilled, or fried.</p>
-                            <p>$.2.35 Per Kilo</p>
+<!-- Crab Section.................................................................................................................... -->
+    <div class="menu-background" id="crabs" id="menu">
+        <div class="swiper-container">
+            <h1>Crabs</h1>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-container">
+                            <p>Spicy Crab</p>
+                            <img src="/image/menu-img/crabs/crab1.jpeg" alt="">
+                            <p>Spicy crab is a culinary delight featuring succulent crab meat infused with a fiery blend of spices. The exact composition varies widely depending on regional preferences and individual recipes, but common ingredients include chili peppers (providing the heat), garlic, ginger, scallions, and often soy sauce, rice vinegar, or other savory components for depth of flavor. 
+                                The level of spiciness can range from a gentle warmth to an intense, mouth-numbing burn, catering to diverse palates.</p>
                         </div>
-                        <div class="slide" id="slide2">
-                            <img src="./image/menu-img/food2.jpg" alt="Food Item 2">
-                            <h3>Crabs</h3>
-                            <p>Crabs are fascinating crustaceans with ten legs and a hard shell. They scuttle sideways and use their large claws for defense and catching food. They come in many varieties, living in oceans, freshwater, and even on land.
-                                Cooked crab, on the other hand, is a delicious seafood delicacy! The meat has a sweet and delicate flavor and a tender, flaky texture. It's often enjoyed in dishes like crab cakes, crab bisque, or simply steamed with butter.</p>
-                                <p>$.4.15 Per Kilo</p>
+                        <h2>$16.00</h2>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide-container">
+                            <p>Butter Garlic Crab</p>
+                            <img src="/image/menu-img/crabs/crab2.jpg" alt="">
+                            <p>Butter garlic crab is a decadent and flavorful dish that features succulent crab meat bathed in a rich, creamy sauce made with butter, garlic, and often other aromatics like white wine, lemon juice, and herbs. 
+                                The combination of buttery richness, garlicky pungency, and the sweet, delicate taste of crab creates a truly irresistible culinary experience.</p>
                         </div>
-                        <div class="slide" id="slide3">
-                            <img src="./image/menu-img/food3.jpg" alt="Food Item 3">
-                            <h3>Prawns</h3>
-                            <p>Prawns are delicious crustaceans with long, slender bodies and delicate, sweet flavor. They're often called "shrimp" but are actually a distinct variety. They are enjoyed worldwide, cooked in various ways, from grilling and frying to steaming and adding to soups and stir-fries.</p>
-                            <p>$.1.80 Per Kilo</p>
+                        <h2>$15.22</h2>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide-container">  
+                            <p>Steamed Crab</p>
+                            <img src="/image/menu-img/crabs/crab3.jpg" alt="">
+                            <p>Steamed crab is a simple yet elegant dish that showcases the natural sweetness and delicate flavor of the crab meat. 
+                                It involves steaming whole crabs until they are cooked through, resulting in tender, juicy meat that is easily extracted from the shell. 
+                                This method preserves the crab's natural flavors and is often served with a simple dipping sauce, like melted butter or a soy sauce-based mixture.</p>
                         </div>
-                        <div class="slide" id="slide4">
-                            <img src="./image/menu-img/food4.jpg" alt="Food Item 3">
-                            <h3>Shrimps</h3>
-                            <p>Shrimps are small, tasty crustaceans with a delicate, sweet flavor. They have a curved body and are often found in oceans and freshwater. They're a popular seafood choice worldwide, enjoyed in various dishes like stir-fries, pasta, and soups.</p>
-                            <p>$.2.20 Per Kilo</p>
+                        <h2>$18.50</h2>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slide-container">
+                            <p>Fried Crab</p>
+                            <img src="/image/menu-img/crabs/crab4.jpg" alt="">
+                            <p>Fried crab is a crispy and flavorful dish where crab meat or whole crabs are coated in a batter or breading and deep-fried until golden brown and crispy. 
+                                The frying process adds a satisfying crunch and enhances the crab's natural flavor. Fried crab can be served as a standalone appetizer or as part of a larger meal.
+                                No matter which preparation you choose, crab offers a delicious and nutritious meal. Remember to enjoy it in moderation, as the sauces and cooking methods can affect the overall fat and calorie content.</p>
                         </div>
+                        <h2>$28.23</h2>
+                    </div>
                 </div>
-                    <button class="prev"><</button>
-                    <button class="next">></button>
-            </section>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
-            <div class="about-background">
+    </div>
+<!-- Mollusk Section.................................................................................................................... -->
+        <div class="menu-background" id="mollusk" id="menu">
+            <div class="swiper-container">
+                <h1>Mollusk</h1>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-container">
+                                <p>Cheesy Grilled Mussels</p>
+                                <img src="/image/menu-img/mollusk/clams1.jpg" alt="">
+                                <p>A cheesy grilled mollusk is a delightful culinary creation that combines the briny sweetness of fresh mollusks with the rich, savory goodness of melted cheese. 
+                                    Imagine a plump, juicy mollusk, like a scallop or oyster, expertly grilled to perfection, its natural flavors enhanced by the heat. The mollusk itself offers a wealth of nutrients, including protein, omega-3 fatty acids, and essential vitamins and minerals.</p>
+                            </div>
+                            <h2>$13.20</h2>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="slide-container">
+                                <p>Steamed Clams</p>
+                                <img src="/image/menu-img/mollusk/clam2.png" alt="">
+                                <p>Steamed clams are a simple yet flavorful dish that showcases the natural sweetness and brininess of fresh clams. They're prepared by steaming the clams in a pot with a small amount of water, often with aromatics like garlic, white wine, or herbs. 
+                                    The steam cooks the clams quickly, resulting in tender, juicy meat that is easily extracted from the shells. The broth that's created during the steaming process is also delicious, making it a perfect base for a flavorful soup or sauce.</p>
+                            </div>
+                            <h2>$12.45</h2>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="slide-container">  
+                                <p>Fried Mussels</p>
+                                <img src="/image/menu-img/mollusk/fried-mussels.jpg" alt="">
+                                <p>Fried mussels are a crispy and flavorful dish that offers a delicious way to enjoy these small, briny shellfish. Imagine plump, juicy mussels coated in a light and crispy batter, deep-fried to golden perfection. The heat of the oil creates a satisfying crunch, while the interior remains tender and juicy. 
+                                    The mussels' natural brininess is enhanced by the crispy coating, and often, a flavorful dipping sauce, like aioli or tartar sauce, is served alongside, adding another dimension of taste. Fried mussels are a popular appetizer or snack, often enjoyed with a cold beer or a refreshing cocktail.</p>
+                            </div>
+                            <h2>$16.60</h2>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="slide-container">
+                                <p>Clams in Garlic Sorrel Cream</p>
+                                <img src="/image/menu-img/mollusk/Clams in Garlic Sorrel Cream.jpg" alt="">
+                                <p>Clams in Garlic Sorrel Cream is a dish that elevates the simple elegance of fresh clams to a new level of culinary sophistication. Picture plump, perfectly steamed clams, their briny sweetness intensified by a luxurious sauce. This sauce is a masterful blend of creamy richness, the pungent bite of garlic, and the bright, tangy lift of sautéed sorrel. 
+                                    The sorrel's subtle earthiness adds a layer of complexity, balancing the richness of the cream and the sharp garlic. The overall effect is a harmonious symphony of flavors savory, tangy, and creamy all at once. Served hot, the dish releases enticing aromas, promising a truly delightful experience.</p>
+                            </div>
+                            <h2>$21.99</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+<!-- Crustaceans Section.................................................................................................................... -->
+        <div class="menu-background" id="crustaceans" id="menu">
+            <div class="swiper-container">
+                <h1>Crustaceans</h1>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-container">
+                                <p>Grilled Lobster</p>
+                                <img src="/image/menu-img/crustaceans/crus1.jpg" alt="">
+                                <p>Grilled lobster is a luxurious and flavorful dish that showcases the sweet, succulent meat of the lobster. The lobster is split in half, brushed with butter or oil, and grilled over an open flame until the meat is cooked through and the shell is charred and smoky. 
+                                    The high heat of the grill caramelizes the natural sugars in the lobster meat, creating a rich, complex flavor that is enhanced by the smokiness of the grill. Grilled lobster is often served with melted butter, lemon wedges, and fresh herbs, allowing the natural sweetness of the lobster to shine.</p>
+                            </div>
+                            <h2>$35.00</h2>
+                        </div>
+        
+                        <div class="swiper-slide">
+                            <div class="slide-container">
+                                <p>Steamed Lobster</p>
+                                <img src="/image/menu-img/crustaceans/crus2.jpg" alt="">
+                                <p>Steamed lobster is a luxurious seafood dish where a whole lobster is gently cooked in a steamer, preserving its natural sweetness and delicate texture. The lobster retains its vibrant reddish-brown shell, while the flesh turns a delicate white or pink.
+                                    Steamed lobster offers significant health benefits, being nutrient-rich with protein, vitamin B12, and omega-3 fatty acids, while remaining low in calories and fat. Its versatility allows for simple preparations with melted butter or more elaborate dishes with sauces and sides, making it a delicious and healthy choice for a special meal.</p>
+                            </div>
+                            <h2>$25.00</h2>
+                        </div>
+        
+                        <div class="swiper-slide">
+                            <div class="slide-container">  
+                                <p>Shrimp Scampi</p>
+                                <img src="/image/menu-img/crustaceans/crus3.jpg" alt="">
+                                <p>Shrimp scampi is a classic Italian-American dish that features tender shrimp cooked in a garlicky, buttery sauce with white wine, lemon juice, and fresh herbs. The shrimp are quickly sautéed in the flavorful sauce until they are pink and opaque, then served over pasta or with crusty bread to soak up the delicious juices. 
+                                    The combination of sweet shrimp, savory garlic, and tangy lemon creates a bright and flavorful dish that is perfect for a special occasion or a weeknight meal.</p>
+                            </div>
+                            <h2>$18.00</h2>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="slide-container">
+                                <p>Fried Shrimp Tempura</p>
+                                <img src="/image/menu-img/crustaceans/crus4.png" alt="">
+                                <p>Fried shrimp tempura is a Japanese dish. It features shrimp coated in a light batter. The batter is typically made from flour, cornstarch, and water. The shrimp is then deep-fried until golden brown and crispy. The resulting texture is a crispy exterior and a juicy interior. The shrimp has a mild, slightly sweet flavor. Shrimp is a good source of protein. 
+                                    It also contains omega-3 fatty acids, beneficial for heart health. Shrimp is rich in selenium, a powerful antioxidant. While deep-frying adds fat, tempura shrimp can be relatively low in calories if the batter is light. Enjoy it as part of a balanced diet.</p>
+                            </div>
+                            <h2>$12.34</h2>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+<!-- Fish Section.................................................................................................................... -->
+            <div class="menu-background" id="fish" id="menu">
+                <div class="swiper-container">
+                    <h1>Fish</h1>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-container">
+                                    <p>Grilled Salmon</p>
+                                    <img src="/image/menu-img/fish/fish1.jpg" alt="">
+                                    <p>Grilled salmon is a delicious and healthy dish that features tender, flaky salmon fillets cooked over an open flame. The high heat of the grill caramelizes the salmon's natural sugars, creating a rich, smoky flavor that is enhanced by the charred grill marks. 
+                                        The salmon is often seasoned with a simple blend of herbs, spices, and olive oil, allowing the fish's natural taste to shine. Grilled salmon is a versatile dish that can be served with a variety of sides, from roasted vegetables to a fresh salad, making it a perfect option for a quick and nutritious meal.</p>
+                                </div>
+                                <h2>$22.00</h2>
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <div class="slide-container">
+                                    <p>Pan-Seared Halibut</p>
+                                    <img src="/image/menu-img/fish/fish2.jpg" alt="">
+                                    <p>Pan-seared halibut is a simple yet elegant dish that showcases the delicate, flaky texture and mild flavor of halibut fillets. The fish is seasoned with salt and pepper, then seared in a hot pan until the exterior is golden brown and crispy, while the interior remains tender and moist. 
+                                        The halibut is often served with a flavorful sauce, like a lemon-butter caper sauce or a fresh herb salsa, adding brightness and depth to the dish. Pan-seared halibut is a versatile option that can be enjoyed on its own or paired with a variety of sides, making it a perfect choice for a special occasion or a weeknight meal.</p>
+                                </div>
+                                <h2>$26.00</h2>
+                            </div>
+            
+                            <div class="swiper-slide">
+                                <div class="slide-container">  
+                                    <p>Baked Cod</p>
+                                    <img src="/image/menu-img/fish/fish3.jpg" alt="">
+                                    <p>Baked cod is a comforting and satisfying dish that features tender, flaky cod fillets baked in the oven until cooked through and golden brown. The cod is often seasoned with a simple blend of herbs, spices, and olive oil, allowing the fish's natural flavor to shine. 
+                                        Baking the cod in the oven ensures that it stays moist and tender, while developing a crispy, flavorful crust on the exterior. Baked cod is a versatile dish that can be served with a variety of sides, from roasted vegetables to creamy mashed potatoes, making it a perfect option for a hearty and delicious meal.</p>
+                                </div>
+                                <h2>$20.00</h2>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container">
+                                    <p>Grilled Tuna</p>
+                                    <img src="/image/menu-img/fish/fish4.jpg" alt="">
+                                    <p>Grilled tuna is a delicious and healthy dish that features tender, meaty tuna steaks cooked over an open flame. The high heat of the grill caramelizes the tuna's natural sugars, creating a rich, smoky flavor that is enhanced by the charred grill marks. 
+                                        The tuna is often seasoned with a simple blend of herbs, spices, and olive oil, allowing the fish's natural taste to shine. Grilled tuna is a versatile dish that can be served with a variety of sides, from roasted vegetables to a fresh salad, making it a perfect option for a quick and nutritious meal.</p>
+                                </div>
+                                <h2>$24.00</h2>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+<!-- End of Menu Section.................................................................................................................... -->
                 <section id="about" class="about">
                     <div class="about-container">
                         <div class="about-text">
                             <h2>About Us</h2>
                             <p>Welcome to King Lucas, your premier destination for fresh crabs and seafood. Our commitment to quality and sustainability ensures that you receive the best products available. With years of experience in the seafood industry, we take pride in delivering exceptional service and delicious dishes that will satisfy your cravings.
                                 We source our seafood from responsible and sustainable fisheries, ensuring that our commitment to the environment is as strong as our commitment to quality. Our expert team hand-selects each crab and piece of seafood, guaranteeing freshness and flavor. Whether you're looking for a classic crab boil, a succulent lobster roll, or a delicate plate of oysters, we have something to tantalize every palate.</p>
-                            <p>Our menu features a wide variety of fresh seafood options, prepared with care and expertise. From our signature crab cakes, made with jumbo lump crab meat and a touch of Old Bay seasoning, to our grilled salmon, perfectly cooked to flaky perfection, each dish is a testament to our dedication to culinary excellence. We also offer a selection of fresh-caught fish, prepared according to your preference, whether it's pan-seared, grilled, or baked.
-                                Join us on a culinary journey and explore the rich flavors of the sea. Our welcoming atmosphere and friendly staff create an unforgettable dining experience. Whether you're dining in or taking out, we guarantee a delightful experience with every bite. Come experience the King Lucas difference and discover why we're the premier destination for fresh seafood in town.</p>
                         </div>
                         <div class="about-image">
-                            <div class="about-item"><img src="./image/about-img/img1.jpg" alt="About King Lucas Seafood"></div>
+                            <div class="about-item"><img src="./image/about-img/img1.jpg" alt="About King Lucas Seafood">
+                            </div>
                         </div>
-                    </div>
                 </section>
             </div>
         <div class="gallery-background">
             <h3>GALLERY</h3>
     <section id="gallery" class="gallery">
-        <div class="gallery-item"><img src="./image/gallery-img/gallery1.jpg" alt="Image 1"></div>
-            <div class="gallery-item"><img src="./image/gallery-img/gallery2.jpg" alt="Image 2"></div>
-                <div class="gallery-item"><img src="./image/gallery-img/gallery3.jpg" alt="Image 3"></div>
-                    <div class="gallery-item"><img src="./image/gallery-img/gallery4.jpg" alt="Image 4"></div>
-                        <div class="gallery-item"><img src="./image/gallery-img/gallery5.jpg" alt="Image 5"></div>
-                    <div class="gallery-item"><img src="./image/gallery-img/gallery6.jpg" alt="Image 6"></div>
-                <div class="gallery-item"><img src="./image/gallery-img/gallery7.jpg" alt="Image 7"></div>
-            <div class="gallery-item"><img src="./image/gallery-img/gallery8.jpg" alt="Image 8"></div>
+        <div class="gallery-item"><img src="./image/menu-img/crabs/crab1.jpeg" alt="Image 1"></div>
+            <div class="gallery-item"><img src="./image/menu-img/crabs/crab2.jpg" alt="Image 2"></div>
+                <div class="gallery-item"><img src="./image/menu-img/crabs/crab3.jpg" alt="Image 3"></div>
+                    <div class="gallery-item"><img src="./image/menu-img/crabs/crab4.jpg" alt="Image 4"></div>
+                        <div class="gallery-item"><img src="./image/menu-img/mollusk/clam2.png" alt="Image 5"></div>
+                    <div class="gallery-item"><img src="./image/menu-img/mollusk/Clams in Garlic Sorrel Cream.jpg" alt="Image 6"></div>
+                <div class="gallery-item"><img src="./image/menu-img/mollusk/clams1.jpg" alt="Image 7"></div>
+            <div class="gallery-item"><img src="./image/menu-img/mollusk/fried-mussels.jpg" alt="Image 8"></div>
+        <div class="gallery-item"><img src="./image/menu-img/crustaceans/crus1.jpg" alt="Image 9"></div>
+    <div class="gallery-item"><img src="./image/menu-img/crustaceans/crus2.jpg" alt="Image 10"></div>
+        <div class="gallery-item"><img src="./image/menu-img/crustaceans/crus3.jpg" alt="Image 11"></div>
+            <div class="gallery-item"><img src="./image/menu-img/crustaceans/crus4.png" alt="Image 12"></div>
+                <div class="gallery-item"><img src="./image/menu-img/fish/fish1.jpg" alt="Image 13"></div>
+                    <div class="gallery-item"><img src="./image/menu-img/fish/fish2.jpg" alt="Image 14"></div>
+                        <div class="gallery-item"><img src="./image/menu-img/fish/fish3.jpg" alt="Image 15"></div>
+                    <div class="gallery-item"><img src="./image/menu-img/fish/fish4.jpg" alt="Image 16"></div>
     </section>
         </div>
 
-        <footer class="footer" id="footer">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <a href="#home" class="logo"><img src="./image/logo.png" alt="LOGO"></a>
+<!-- Contact Section.................................................................................................................... -->
+
+<section class="contact-background" id="contact">
+    <div class="contact-container">
+        <h1>Get in Touch</h1>
+        <p class="contact-subtitle">Have a question or want to collaborate? Feel free to reach out!</p>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
-                <div class="footer-social">
-                    <h3>Follow Us</h3>
-                    <ul class="social-icons">
-                        <li>
-                            <a href="https://www.facebook.com/profile.php?id=100064085196235" target="_blank" aria-label="Facebook">
-                                <img src="./image/fb-logo.png" alt="Facebook Logo">
-                            </a>
-                            <h3>Contact Number</h3>
-                            <h4>+63 948 5760 614</h4>
-                        </li>
-                    </ul>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#menu">Products</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#footer">Contact</a></li>
-                    </ul>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+                    <div id="message-box" class="message-box"></div>
                 </div>
-                <div class="footer-about">
-                    <p>Your premier destination for fresh seafood, committed to quality and sustainability.</p>
-                    <p>&copy; 2023 King Lucas Seafoods Dealer. All rights reserved.</p>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i>Brgy. Pontevedra, Roxas City, Capiz 5800</li>
+                    <li><i class="fas fa-phone"></i>+63 958 5660 614</li>
+                    <li><i class="fas fa-envelope"></i>johncyril.benliro@hercorcollege.edu.ph</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100064085196235"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-        </footer>
-        
+        </div>
+    </div>
+</section>
+
+<footer class="footer" id="footer">
+    <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <a href="#home" class="logo">
+                <img src="./image/logo.png" alt="King Lucas Seafoods Logo">
+            </a>
+            <p>Your premier destination for fresh seafood, committed to quality and sustainability.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Brgy. Pontevedra, Roxas City, Capiz 5800</li>
+                <li><i class="fas fa-phone"></i> +63 958 5660 614</li>
+                <li><i class="fas fa-envelope"></i> johncyril.benliro@hercorcollege.edu.ph</li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100064085196235" target="_blank" aria-label="Facebook">
+                        <img src="./image/fb-logo.png" alt="Facebook Logo">
+                    </a>
+                </li>
+                <!-- Add more social media links if needed -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2023 King Lucas Seafoods Dealer. All rights reserved.</p>
+    </div>
+</footer>
 </main>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
     <script src="script.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
