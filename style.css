@@ -155,7 +155,7 @@ body {
         flex: 1 1 calc(50% - 20px); 
         max-width: calc(700% - 80px);    
     }
-    .contact-background {
+    .contact-background {   
         font-size: 10px;
         width: 80%;
     }
