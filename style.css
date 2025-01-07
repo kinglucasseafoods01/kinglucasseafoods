@@ -155,6 +155,11 @@ body {
         flex: 1 1 calc(50% - 20px); 
         max-width: calc(700% - 80px);    
     }
+    .contact-background {
+        font-size: 10px;
+        width: 80%;
+    }
+
     .footer {
         font-size: 15px;
     }
@@ -270,6 +275,9 @@ body {
         .swiper-slide h2 {
             font-size: 15px;
         }
+    .contact-background {
+        width: 70%;   
+    }
     .about-background {
         max-height: 1200px;
     }
@@ -382,6 +390,9 @@ body {
         .swiper-slide h2 {
             font-size: 30px;
         }
+    .contact-background {
+        width: 100%;   
+    }
     .about-background {
         font-size: 18px;
         max-height: 950px;
